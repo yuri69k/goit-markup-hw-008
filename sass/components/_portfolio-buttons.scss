@@ -39,8 +39,8 @@
   &:focus {
     background-color: var(--accent-color);
     color: var(--primary-color);
-    box-shadow: 0px 3px 1px var(--box-shodow-fifth), 0px 1px 2px var(--box-shodow-fourth),
-      0px 2px 2px var(--box-shodow-first);
+    box-shadow: 0px 3px 1px var(--box-shadow-fifth), 0px 1px 2px var(--box-shadow-fourth),
+      0px 2px 2px var(--box-shadow-first);
     transition: background-color 250ms var(--cubic-bezier), color 250ms var(--cubic-bezier),
       box-shadow 250ms var(--cubic-bezier);
   }

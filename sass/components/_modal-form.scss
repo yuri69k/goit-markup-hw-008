@@ -116,3 +116,8 @@
   display: block;
   margin: 0 auto;
 }
+.checkbox:focus-visible ~ .checkbox--checked {
+  outline-offset: 2px;
+  outline: 2px solid var(--primary-text-color);
+  border-radius: 1px;
+}
