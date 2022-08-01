@@ -1456,6 +1456,7 @@ body {
   opacity: 1;
   -webkit-transition: opacity 250ms var(--cubic-bezier);
   transition: opacity 250ms var(--cubic-bezier);
+  z-index: 3;
 }
 
 .is-hidden {
