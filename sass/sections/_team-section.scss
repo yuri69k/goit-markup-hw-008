@@ -1,0 +1,13 @@
+.team {
+    @extend %section;
+    background-color: var(--accent-bg-color);
+}
+
+.team__wrap {
+    @extend %container;
+}
+
+.team__title {
+    @extend %title;
+    margin-bottom: 50px;
+}

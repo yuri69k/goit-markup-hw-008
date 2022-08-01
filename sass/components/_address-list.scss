@@ -1,0 +1,22 @@
+.address-list {
+    @extend %list;
+}
+
+.address-list__item {
+    font-style: normal;
+
+    &:not(:last-child) {
+        margin-bottom: 9px;
+    }
+}
+
+.address-list__link {
+    @extend %link;
+    font-weight: normal;
+    color: var(--opacity-address-color);
+
+    &:hover {
+        color: var(--accent-color);
+        transition: color 250ms var(--cubic-bezier);
+    }
+}

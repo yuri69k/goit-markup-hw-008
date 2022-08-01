@@ -1,0 +1,49 @@
+.nav {
+  @extend %vertical-centered;
+}
+.nav__list {
+  @extend %list;
+
+  display: flex;
+  margin-left: 93px;
+}
+
+.nav__item {
+  position: relative;
+
+  &:not(:last-child) {
+    margin-right: 50px;
+  }
+}
+
+.nav__link {
+  @extend %link;
+
+  display: block;
+  padding-top: 32px;
+  padding-bottom: 32px;
+
+  line-height: 1.15;
+
+  &:hover,
+  &:focus {
+    color: var(--accent-color);
+    transition: color 250ms var(--cubic-bezier);
+  }
+}
+
+.nav__link--current {
+  color: var(--accent-color);
+
+  &::after {
+    position: absolute;
+    left: 0;
+    bottom: -1px;
+    display: block;
+    content: '';
+    width: 100%;
+    height: 4px;
+    border-radius: 2px;
+    background-color: var(--accent-color);
+  }
+}

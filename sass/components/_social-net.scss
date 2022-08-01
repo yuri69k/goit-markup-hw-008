@@ -1,0 +1,46 @@
+.social-net {
+    @extend %list;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    margin-bottom: 30px;
+}
+
+.social-net__item:not(:last-child) {
+    margin-right: 10px;
+}
+
+.social-net__link {
+    @extend %link;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    transition: background-color 250ms var(--cubic-bezier);
+
+    &:hover,
+    &:active {
+        background-color: var(--accent-color);
+    }
+
+    &:hover .social-net__icon,
+    &:active .social-net__icon {
+        fill: var(--primary-color);
+    }
+}
+
+.social-net__link--footer {
+    background-color: var(--footer-icon-bg);
+}
+
+.social-net__icon {
+    fill: var(--social-net-color);
+    transition: fill 250ms var(--cubic-bezier);
+}
+
+.social-net__icon--footer {
+    fill: var(--primary-color);
+}

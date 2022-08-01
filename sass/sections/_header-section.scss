@@ -1,0 +1,8 @@
+.header {
+    border-bottom: 1px solid var(--border-color-header);
+}
+
+.header__wrap {
+    @extend %container;
+    @extend %vertical-centered;
+}

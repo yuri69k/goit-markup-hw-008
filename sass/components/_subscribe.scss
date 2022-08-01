@@ -1,0 +1,23 @@
+.subscribe__title {
+    @extend %subtitle;
+    margin-bottom: 20px;
+}
+
+.subsribe__form {
+    display: flex;
+}
+
+.subscribe__input {
+    @extend %input;
+    
+    box-sizing: border-box;
+    width: 358px;
+    margin-right: 12px;
+    padding: 15px 16px;
+    border-radius: 4px;
+    border: var(--border-input);
+    font-size: 16px;
+    line-height: 1.25;
+    color: var(--primary-color);
+    background-color: transparent;
+}

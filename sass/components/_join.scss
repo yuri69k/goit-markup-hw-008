@@ -1,0 +1,16 @@
+.join {
+    margin-right: auto;
+}
+
+.join__title {
+    @extend %subtitle;
+
+    margin-bottom: 20px;
+    color: var(--primary-color);
+}
+
+.soc-list-footer .link:hover .footer-icon,
+.soc-list-footer .link:focus .footer-icon {
+    background-color: var(--accent-color);
+    transition: background-color 250ms var(--cubic-bezier);
+}
