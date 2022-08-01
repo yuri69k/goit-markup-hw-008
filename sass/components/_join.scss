@@ -1,16 +1,26 @@
 .join {
-    margin-right: auto;
+  @media screen and (max-width: 1199px) {
+    & {
+      margin-bottom: 60px;
+    }
+  }
+
+  @media screen and (min-width: 1200px) {
+    & {
+      margin-right: 86px;
+    }
+  }
 }
 
 .join__title {
-    @extend %subtitle;
+  @extend %subtitle;
 
-    margin-bottom: 20px;
-    color: var(--primary-color);
+  margin-bottom: 20px;
+  color: var(--primary-color);
 }
 
 .soc-list-footer .link:hover .footer-icon,
 .soc-list-footer .link:focus .footer-icon {
-    background-color: var(--accent-color);
-    transition: background-color 250ms var(--cubic-bezier);
+  background-color: var(--accent-color);
+  transition: background-color 250ms var(--cubic-bezier);
 }

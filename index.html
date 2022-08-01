@@ -8,41 +8,73 @@
     <title>Web Studio</title>
     <link
         href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap"
-        rel="stylesheet" />
-    <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css" />
+        rel="stylesheet" />  
     <link rel="stylesheet" href="./css/main.min.css" />
 </head>
 
 <body>
     <header class="header">
-        <div class="header__wrap">
-            <nav class="nav">
+        <div class="container">
+            <div class="header__wrap">
                 <a href="./index.html" class="logo"><span class="logo__accent">Web</span>Studio</a>
-                <ul class="nav__list">
-                    <li class="nav__item">
-                        <a class="nav__link nav__link--current" href="./index.html">Студия</a>
-                    </li>
-                    <li class="nav__item">
-                        <a class="nav__link" href="./portfolio.html">Портфолио</a>
-                    </li>
-                    <li class="nav__item"><a class="nav__link" href="#">Контакты</a></li>
-                </ul>
-            </nav>
-            <ul class="contacts">
-                <li class="contacts__item">
-                    <a class="contacts__link" href="mailto:info@devstudio.com">
-                        <svg class="contacts__icon" width="16" height="12">
-                            <use href="./images/icons.svg#email"></use>
-                        </svg>info@devstudio.com</a>
-                </li>
-                <li class="contacts__item">
-                    <a class="contacts__link" href="tel:+380961111111"><svg class="contacts__icon" width="10"
-                            height="16">
-                            <use href="./images/icons.svg#phone"></use>
-                        </svg>+38096 111 11 11</a>
-                </li>
-            </ul>
+                <button type="button" class="menu-backdrop__button" aria-expanded="false"
+                    aria-controls="menu-backdrop__container" data-menu-button="">
+                    <svg class="menu-backdrop__menu-icon" width="40" height="40"
+                        aria-label="Переключатель мобильного меню">
+                        <use class="menu-backdrop__icon-menu" href="./images/icons.svg#sandwich-btn"></use>
+                    </svg>
+                </button>
+                <div class="menu-backdrop" id="nav__menu-container" data-menu>
+                    <div class="menu-backdrop__container">
+                        <button type="button" class="menu-backdrop__button menu-backdrop__button--cross"
+                            aria-expanded="false" aria-controls="menu-backdrop__container" data-menu-button-close>
+                            <svg class="menu-backdrop__menu-icon" width="40" height="40"
+                                aria-label="Переключатель мобильного меню">
+                                <use class="menu-backdrop__icon-cross" href="./images/icons.svg#close-menu-btn"></use>
+                            </svg>
+                        </button>
+                        <nav class="nav">
+                            <ul class="nav__list">
+                                <li class="nav__item">
+                                    <a class="nav__link nav__link--current" href="./index.html">Студия</a>
+                                </li>
+                                <li class="nav__item">
+                                    <a class="nav__link" href="./portfolio.html">Портфолио</a>
+                                </li>
+                                <li class="nav__item"><a class="nav__link" href="#">Контакты</a></li>
+                            </ul>
+                        </nav>
+                        <ul class="contacts">
+                            <li class="contacts__item">
+                                <a class="contacts__link" href="mailto:info@devstudio.com">
+                                    <svg class="contacts__icon" width="16" height="12">
+                                        <use href="./images/icons.svg#email"></use>
+                                    </svg>info@devstudio.com</a>
+                            </li>
+                            <li class="contacts__item">
+                                <a class="contacts__link contacts__link--accent" href="tel:+380961111111"><svg
+                                        class="contacts__icon" width="10" height="16">
+                                        <use href="./images/icons.svg#phone"></use>
+                                    </svg>+38096 111 11 11</a>
+                            </li>
+                        </ul>
+                        <ul class="social-links">
+                            <li class="social-links__item">
+                                <a class="social-links__link" href="#">Instagram</a>
+                            </li>
+                            <li class="social-links__item">
+                                <a class="social-links__link" href="#">Twitter</a>
+                            </li>
+                            <li class="social-links__item">
+                                <a class="social-links__link" href="#">Facebook</a>
+                            </li>
+                            <li class="social-links__item">
+                                <a class="social-links__link" href="#">LinkedIn</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
         </div>
     </header>
     <main>
@@ -56,7 +88,7 @@
             </div>
         </section>
         <section class="features">
-            <div class="features__wrap">
+            <div class="features__wrap container">
                 <h2 class="features__title">Наши преимущества</h2>
                 <ul class="features__list">
                     <li class="features__item">
@@ -107,30 +139,34 @@
             </div>
         </section>
         <section class="capabilities">
-            <div class="capabilities__wrap">
+            <div class="capabilities__wrap container">
                 <h2 class="capabilities__title">Чем мы занимаемся</h2>
                 <ul class="capabilities__list">
                     <li class="capabilities__item">
-                        <img class="capabilities__thumb" src="./images/img-keyboard.jpg" alt="keyboard" width="370" />
+                        <img srcset="./images/img-keyboard.jpg 1x, ./images/img-keyboard@x2.jpg 2x"
+                            src="./images/img-keyboard.jpg" alt="keyboard" width="370" />
                         <h3 class="capabilities__descr">Десктопные приложения</h3>
                     </li>
                     <li class="capabilities__item">
-                        <img class="capabilities__thumb" src="./images/img-keyboard.jpg" alt="keyboard" width="370" />
+                        <img srcset="./images/img-smartphone.jpg 1x, ./images/img-smartphone@x2.jpg 2x"
+                            src="./images/img-smartphone.jpg" alt="keyboard" width="370" />
                         <h3 class="capabilities__descr">Мобильные приложения</h3>
                     </li>
                     <li class="capabilities__item">
-                        <img class="capabilities__thumb" src="./images/img-tablet.jpg" alt="tablet" width="370" />
+                        <img srcset="./images/img-tablet.jpg 1x, ./images/img-tablet@x2.jpg 2x"
+                            src="./images/img-smartphone.jpg" alt="keyboard" width="370" />
                         <h3 class="capabilities__descr">Дизайнерские решения</h3>
                     </li>
                 </ul>
             </div>
         </section>
         <section class="team">
-            <div class="team__wrap">
+            <div class="team__wrap container">
                 <h2 class="team__title">Наша команда</h2>
                 <ul class="team-members">
                     <li class="team-members__card">
-                        <img class="team-members__thumb" src="./images/ilya.jpg" alt="Игорь Демьяненко" width="270" />
+                        <img class="team-members__thumb" srcset="./images/ilya.jpg 1x, ./images/ilya@x2.jpg 2x"
+                            src="./images/ilya.jpg" alt="Игорь Демьяненко" width="270" />
                         <h3 class="team-members__title">Игорь Демьяненко</h3>
                         <p class="team-members__text">Product Designer</p>
                         <ul class="social-net">
@@ -161,7 +197,8 @@
                         </ul>
                     </li>
                     <li class="team-members__card">
-                        <img class="team-members__thumb" src="./images/olga.jpg" alt="Ольга Репина" width="270" />
+                        <img class="team-members__thumb" srcset="./images/olga.jpg 1x, ./images/olga@x2.jpg 2x"
+                            src="./images/olga.jpg" alt="Ольга Репина" width="270" />
                         <h3 class="team-members__title">Ольга Репина</h3>
                         <p class="team-members__text">Frontend Developer</p>
                         <ul class="social-net">
@@ -192,7 +229,8 @@
                         </ul>
                     </li>
                     <li class="team-members__card">
-                        <img class="team-members__thumb" src="./images/nikolay.jpg" alt="Николай Тарасов" width="270" />
+                        <img class="team-members__thumb" srcset="./images/nikolay.jpg 1x, ./images/nikolay@x2.jpg 2x"
+                            src="./images/nikolay.jpg" alt="Николай Тарасов" width="270" />
                         <h3 class="team-members__title">Николай Тарасов</h3>
                         <p class="team-members__text">Marketing</p>
                         <ul class="social-net">
@@ -223,7 +261,8 @@
                         </ul>
                     </li>
                     <li class="team-members__card">
-                        <img class="team-members__thumb" src="./images/michael.jpg" alt="Михаил Ермаков" width="270" />
+                        <img class="team-members__thumb" srcset="./images/michael.jpg 1x, ./images/michael@x2.jpg 2x"
+                            src="./images/michael.jpg" alt="Михаил Ермаков" width="270" />
                         <h3 class="team-members__title">Михаил Ермаков</h3>
                         <p class="team-members__text">UI Designer</p>
                         <ul class="social-net">
@@ -257,7 +296,7 @@
             </div>
         </section>
         <section class="clients">
-            <div class="clients__wrap">
+            <div class="clients__wrap container">
                 <h2 class="clients__title">Постоянные клиенты</h2>
                 <ul class="clients-list">
                     <li class="clients-list__item">
@@ -302,7 +341,8 @@
         </section>
     </main>
     <footer class="footer">
-        <div class="footer__wrap">
+        <div class="footer__wrap container">
+            <!-- <div class="contact-us"> -->
             <div class="info">
                 <a href="./index.html" class="logo logo--footer"><span class="logo__accent">Web</span>Studio</a>
                 <address class="address">
@@ -347,6 +387,7 @@
                             </svg></a>
                     </li>
                 </ul>
+                <!-- </div> -->
             </div>
             <div class="subscribe">
                 <b class="subscribe__title">Подпишитесь на рассылку</b>
@@ -367,7 +408,7 @@
     <div class="backdrop is-hidden" data-modal>
         <div class="modal">
             <button class="modal__close-btn" type="button" data-modal-close>
-                <svg class="modal__close-btn-icon" width="18px" height="18px">
+                <svg class="modal__close-btn-icon" width="18" height="18">
                     <use href="./images/icons.svg#close-btn"></use>
                 </svg>
             </button>
@@ -420,6 +461,7 @@
     </div>
 
     <script src="./js/modal.js"></script>
+    <script src="./js/mobile-menu.js"></script>
 </body>
 
 </html>

@@ -1,13 +1,17 @@
 .team {
-    @extend %section;
-    background-color: var(--accent-bg-color);
-}
+  @extend %section;
 
-.team__wrap {
-    @extend %container;
+  background-color: var(--accent-bg-color);
 }
 
 .team__title {
-    @extend %title;
-    margin-bottom: 50px;
+  @extend %title;
+
+  margin-bottom: 30px;
+
+  @media screen and (min-width: 1200px) {
+    & {
+      margin-bottom: 50px;
+    }
+  }
 }

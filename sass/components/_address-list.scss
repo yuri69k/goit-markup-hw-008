@@ -1,22 +1,29 @@
 .address-list {
-    @extend %list;
+  @extend %list;
+
+  @media screen and (max-width: 1199px) {
+    & {
+      margin-bottom: 60px;
+    }
+  }
 }
 
 .address-list__item {
-    font-style: normal;
+  font-style: normal;
 
-    &:not(:last-child) {
-        margin-bottom: 9px;
-    }
+  &:not(:last-child) {
+    margin-bottom: 9px;
+  }
 }
 
 .address-list__link {
-    @extend %link;
-    font-weight: normal;
-    color: var(--opacity-address-color);
+  @extend %link;
 
-    &:hover {
-        color: var(--accent-color);
-        transition: color 250ms var(--cubic-bezier);
-    }
+  font-weight: normal;
+  color: var(--opacity-adress-color);
+
+  &:hover {
+    color: var(--accent-color);
+    transition: color 250ms var(--cubic-bezier);
+  }
 }

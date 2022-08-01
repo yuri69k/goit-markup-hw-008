@@ -1,58 +1,68 @@
 .is-hidden {
-    .modal {
-        transform: translate(-50%, -50%) scale(0.1);
-    }
+  .modal {
+    transform: translate(-50%, -50%) scale(0.9);
+    transform: scale(0.9);
+  }
 }
 
 .modal {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%) scale(1);
-    transition: transform 250ms var(--cubic-bezier);
-    width: 528px;
-    padding: 40px;
-    box-sizing: border-box;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(1);
+  transition: transform 250ms var(--cubic-bezier);
+  padding: 40px;
+  border-radius: 4px;
+  background-color: var(--primary-color);
 
-    border-radius: 4px;
-    background-color: var(--primary-color);
+  @media screen and (min-width: 480px) {
+    & {
+      width: 450px;
+    }
+  }
+
+  @media screen and (min-width: 1200px) {
+    & {
+      width: 528px;
+    }
+  }
 }
 
 .modal__close-btn {
-    position: absolute;
-    top: 8px;
-    right: 8px;
+  position: absolute;
+  top: 8px;
+  right: 8px;
 
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 0;
-    margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  margin: 0;
 
-    width: 30px;
-    height: 30px;
+  width: 30px;
+  height: 30px;
 
-    border-radius: 50%;
-    background-color: var(--primary-color);
-    border: 1px solid var(--border-close-btn);
-    cursor: pointer;
+  border-radius: 50%;
+  background-color: var(--primary-color);
+  border: 1px solid var(--border-close-btn);
+  cursor: pointer;
 
-    &:hover .modal__close-btn-icon {
-        fill: var(--accent-color);
-    }
+  &:hover .modal__close-btn-icon {
+    fill: var(--accent-color);
+  }
 }
 
 .modal__close-btn-icon {
-    display: block;
-    margin: auto;
-    fill: currentColor;
-    transition: fill 250ms var(--cubic-bezier);
+  display: block;
+  margin: auto;
+  fill: currentColor;
+  transition: fill 250ms var(--cubic-bezier);
 }
 
 .modal__title {
-    display: block;
-    font-size: 20px;
-    margin-left: 0;
-    margin-right: 0;
-    margin-bottom: 12px;
+  display: block;
+  font-size: 20px;
+  margin-left: 0;
+  margin-right: 0;
+  margin-bottom: 12px;
 }

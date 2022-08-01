@@ -15,38 +15,72 @@
 
 <body>
     <header class="header">
-        <div class="header__wrap">
-            <nav class="nav">
+        <div class="container">
+            <div class="header__wrap">
                 <a href="./index.html" class="logo"><span class="logo__accent">Web</span>Studio</a>
-                <ul class="nav__list">
-                    <li class="nav__item">
-                        <a class="nav__link" href="./index.html">Студия</a>
-                    </li>
-                    <li class="nav__item">
-                        <a class="nav__link nav__link--current" href="./portfolio.html">Портфолио</a>
-                    </li>
-                    <li class="nav__item"><a class="nav__link" href="#">Контакты</a></li>
-                </ul>
-            </nav>
-            <ul class="contacts">
-                <li class="contacts__item">
-                    <a class="contacts__link" href="mailto:info@devstudio.com">
-                        <svg class="contacts__icon" width="16" height="12">
-                            <use href="./images/icons.svg#email"></use>
-                        </svg>info@devstudio.com</a>
-                </li>
-                <li class="contacts__item">
-                    <a class="contacts__link" href="tel:+380961111111"><svg class="contacts__icon" width="10"
-                            height="16">
-                            <use href="./images/icons.svg#phone"></use>
-                        </svg>+38096 111 11 11</a>
-                </li>
-            </ul>
+                <button type="button" class="menu-backdrop__button" aria-expanded="false"
+                    aria-controls="menu-backdrop__container" data-menu-button="">
+                    <svg class="menu-backdrop__menu-icon" width="40" height="40"
+                        aria-label="Переключатель мобильного меню">
+                        <use class="menu-backdrop__icon-menu" href="./images/icons.svg#sandwich-btn"></use>
+                    </svg>
+                </button>
+                <div class="menu-backdrop" id="nav__menu-container" data-menu>
+                    <div class="menu-backdrop__container">
+                        <button type="button" class="menu-backdrop__button menu-backdrop__button--cross"
+                            aria-expanded="false" aria-controls="menu-backdrop__container" data-menu-button-close>
+                            <svg class="menu-backdrop__menu-icon" width="40" height="40"
+                                aria-label="Переключатель мобильного меню">
+                                <use class="menu-backdrop__icon-cross" href="./images/icons.svg#close-menu-btn"></use>
+                            </svg>
+                        </button>
+                        <nav class="nav">
+                            <ul class="nav__list">
+                                <li class="nav__item">
+                                    <a class="nav__link" href="./index.html">Студия</a>
+                                </li>
+                                <li class="nav__item">
+                                    <a class="nav__link nav__link--current" href="./portfolio.html">Портфолио</a>
+                                </li>
+                                <li class="nav__item"><a class="nav__link" href="#">Контакты</a></li>
+                            </ul>
+                        </nav>
+                        <ul class="contacts">
+                            <li class="contacts__item">
+                                <a class="contacts__link" href="mailto:info@devstudio.com">
+                                    <svg class="contacts__icon" width="16" height="12">
+                                        <use href="./images/icons.svg#email"></use>
+                                    </svg>info@devstudio.com</a>
+                            </li>
+                            <li class="contacts__item">
+                                <a class="contacts__link contacts__link--accent" href="tel:+380961111111"><svg
+                                        class="contacts__icon" width="10" height="16">
+                                        <use href="./images/icons.svg#phone"></use>
+                                    </svg>+38096 111 11 11</a>
+                            </li>
+                        </ul>
+                        <ul class="social-links">
+                            <li class="social-links__item">
+                                <a class="social-links__link" href="#">Instagram</a>
+                            </li>
+                            <li class="social-links__item">
+                                <a class="social-links__link" href="#">Twitter</a>
+                            </li>
+                            <li class="social-links__item">
+                                <a class="social-links__link" href="#">Facebook</a>
+                            </li>
+                            <li class="social-links__item">
+                                <a class="social-links__link" href="#">LinkedIn</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
         </div>
     </header>
     <main>
         <section class="portfolio">
-            <div class="portfolio__wrap">
+            <div class="portfolio__wrap container">
                 <h1 class="portfolio__title">Портфолио</h1>
                 <ul class="portfolio-buttons">
                     <li class="portfolio-buttons__item">
@@ -67,7 +101,7 @@
                 </ul>
                 <ul class="portfolio-gallery">
                     <li class="portfolio-gallery__item">
-                        <a href="#" class="portfolio-gallery__link">
+                        <a class="portfolio-gallery__link">
                             <div class="portfolio-gallery__overlay">
                                 <p class="portfolio-gallery__text">
                                     Ресурс предлагает комплексные предложения с разным уровнем функционала и
@@ -85,7 +119,7 @@
                         </a>
                     </li>
                     <li class="portfolio-gallery__item">
-                        <a href="#" class="portfolio-gallery__link">
+                        <a class="portfolio-gallery__link">
                             <div class="portfolio-gallery__overlay">
                                 <p class="portfolio-gallery__text">
                                     Ресурс предлагает комплексные предложения с разным уровнем функционала и
@@ -103,7 +137,7 @@
                         </a>
                     </li>
                     <li class="portfolio-gallery__item">
-                        <a href="#" class="portfolio-gallery__link">
+                        <a class="portfolio-gallery__link">
                             <div class="portfolio-gallery__overlay">
                                 <p class="portfolio-gallery__text">
                                     Ресурс предлагает комплексные предложения с разным уровнем функционала и
@@ -121,7 +155,7 @@
                         </a>
                     </li>
                     <li class="portfolio-gallery__item">
-                        <a href="#" class="portfolio-gallery__link">
+                        <a class="portfolio-gallery__link">
                             <div class="portfolio-gallery__overlay">
                                 <p class="portfolio-gallery__text">
                                     Ресурс предлагает комплексные предложения с разным уровнем функционала и
@@ -139,7 +173,7 @@
                         </a>
                     </li>
                     <li class="portfolio-gallery__item">
-                        <a href="#" class="portfolio-gallery__link">
+                        <a class="portfolio-gallery__link">
                             <div class="portfolio-gallery__overlay">
                                 <p class="portfolio-gallery__text">
                                     Ресурс предлагает комплексные предложения с разным уровнем функционала и
@@ -156,7 +190,7 @@
                         </a>
                     </li>
                     <li class="portfolio-gallery__item">
-                        <a href="#" class="portfolio-gallery__link">
+                        <a class="portfolio-gallery__link">
                             <div class="portfolio-gallery__overlay">
                                 <p class="portfolio-gallery__text">
                                     Ресурс предлагает комплексные предложения с разным уровнем функционала и
@@ -174,7 +208,7 @@
                         </a>
                     </li>
                     <li class="portfolio-gallery__item">
-                        <a href="#" class="portfolio-gallery__link">
+                        <a class="portfolio-gallery__link">
                             <div class="portfolio-gallery__overlay">
                                 <p class="portfolio-gallery__text">
                                     Ресурс предлагает комплексные предложения с разным уровнем функционала и
@@ -192,7 +226,7 @@
                         </a>
                     </li>
                     <li class="portfolio-gallery__item">
-                        <a href="#" class="portfolio-gallery__link">
+                        <a class="portfolio-gallery__link">
                             <div class="portfolio-gallery__overlay">
                                 <p class="portfolio-gallery__text">
                                     Ресурс предлагает комплексные предложения с разным уровнем функционала и
@@ -210,7 +244,7 @@
                         </a>
                     </li>
                     <li class="portfolio-gallery__item">
-                        <a href="#" class="portfolio-gallery__link">
+                        <a class="portfolio-gallery__link">
                             <div class="portfolio-gallery__overlay">
                                 <p class="portfolio-gallery__text">
                                     Ресурс предлагает комплексные предложения с разным уровнем функционала и
@@ -232,7 +266,7 @@
         </section>
     </main>
     <footer class="footer">
-        <div class="footer__wrap">
+        <div class="footer__wrap container">
             <div class="info">
                 <a href="./index.html" class="logo logo--footer"><span class="logo__accent">Web</span>Studio</a>
                 <address class="address">
@@ -293,6 +327,8 @@
             </div>
         </div>
     </footer>
+    <script src="./js/modal.js"></script>
+    <script src="./js/mobile-menu.js"></script>
 </body>
 
 </html>

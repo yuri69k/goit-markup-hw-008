@@ -1,12 +1,8 @@
 .clients {
-    @extend %section;
-}
-
-.clients__wrap {
-    @extend %container;
+  @extend %section;
 }
 
 .clients__title {
-    @extend %title;
-    margin-bottom: 50px;
+  @extend %title;
+  margin-bottom: 30px;
 }

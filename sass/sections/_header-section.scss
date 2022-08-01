@@ -1,8 +1,16 @@
 .header {
-    border-bottom: 1px solid var(--border-color-header);
+  border-bottom: 1px solid var(--border-color-header);
+
+  @media screen and (max-width: 767px) {
+    & {
+      padding-top: 16px;
+      padding-bottom: 16px;
+    }
+  }
 }
 
 .header__wrap {
-    @extend %container;
-    @extend %vertical-centered;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }

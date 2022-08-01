@@ -1,37 +1,57 @@
 .clients-list {
-    @extend %list;
-    display: inline-flex;
-    gap: 30px;
+  @extend %list;
+  display: flex;
+  justify-content: center;
+  @media screen and (min-width: 768px) {
+    & {
+      margin: -15px;
+    }
+  }
+  @media screen and (max-width: 1199px) {
+    & {
+      flex-wrap: wrap;
+    }
+  }
 }
 
 .clients-list__item {
-    width: 170px;
-    height: 92px;
- 
+  margin: 15px;
+
+  @media screen and (max-width: 767px) {
+    & {
+      width: calc((100% - 1 * 60px) / 2);
+    }
+  }
+  @media screen and (max-width: 1199px) {
+    & {
+      width: calc((100% - 2 * 90px) / 3);
+    }
+  }
 }
 
 .clients-list__link {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 100%;
-    border: 1px solid var(--social-net-color);
-    border-radius: 4px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  padding: 16px 0;
+  border: 1px solid var(--social-net-color);
+  border-radius: 4px;
 
-    &:hover,
-    &:active {
-        border-color: var(--accent-color);
-        transition: border-color 250ms var(--cubic-bezier);
-    }
+  &:hover,
+  &:active {
+    border-color: var(--accent-color);
+    transition: border-color 250ms var(--cubic-bezier);
+  }
 
-    &:hover .clients-list__icon,
-    &:active .clients-list__icon {
-        fill: var(--accent-color);
-        transition: fill 250ms var(--cubic-bezier);
-    }
+  &:hover .clients-list__icon,
+  &:active .clients-list__icon {
+    fill: var(--accent-color);
+    transition: fill 250ms var(--cubic-bezier);
+  }
 }
 
 .clients-list__icon {
-    fill: var(--social-net-color);
+  fill: var(--social-net-color);
 }
