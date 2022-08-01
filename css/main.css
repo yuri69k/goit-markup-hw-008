@@ -1158,7 +1158,7 @@ body {
   -webkit-transition: border-color 250ms var(--cubic-bezier);
   transition: border-color 250ms var(--cubic-bezier);
 }
-.clients-list__link:hover .customers-list__icon, .clients-list__link:active .customers-list__icon {
+.clients-list__link:hover .clients-list__icon, .clients-list__link:active .clients-list__icon {
   fill: var(--accent-color);
   -webkit-transition: fill 250ms var(--cubic-bezier);
   transition: fill 250ms var(--cubic-bezier);

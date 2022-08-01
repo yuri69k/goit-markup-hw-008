@@ -39,10 +39,11 @@
       &:active {
         border-color: var(--accent-color);
         transition: border-color 250ms var(--cubic-bezier);
+        
       }
   
-      &:hover .customers-list__icon,
-      &:active .customers-list__icon {
+      &:hover .clients-list__icon,
+      &:active .clients-list__icon {
         fill: var(--accent-color);
         transition: fill 250ms var(--cubic-bezier);
       }
