@@ -1,57 +1,54 @@
 .clients-list {
   @extend %list;
-  display: flex;
-  justify-content: center;
-  @media screen and (min-width: 768px) {
-    & {
-      margin: -15px;
+  margin: -15px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  
+    &__item {
+      margin: 15px;
+  
+      & {
+        width: calc((100% - 60px) / 2);
+      }
+  
+      @media screen and (min-width: 768px) {
+        & {
+          width: calc((100% - 90px) / 3);
+        }
+      }
+  
+      @media screen and (min-width: 1200px) {
+        & {
+          width: calc((100% - 180px) / 6);
+        }
+      }
+    }
+  
+    &__link {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      height: 100%;
+      padding: 16px 0;
+      border: 1px solid var(--social-net-color);
+      border-radius: 4px;
+  
+      &:hover,
+      &:active {
+        border-color: var(--accent-color);
+        transition: border-color 250ms var(--cubic-bezier);
+      }
+  
+      &:hover .customers-list__icon,
+      &:active .customers-list__icon {
+        fill: var(--accent-color);
+        transition: fill 250ms var(--cubic-bezier);
+      }
+    }
+  
+    &__icon {
+      fill: var(--social-net-color);
     }
   }
-  @media screen and (max-width: 1199px) {
-    & {
-      flex-wrap: wrap;
-    }
-  }
-}
-
-.clients-list__item {
-  margin: 15px;
-
-  @media screen and (max-width: 767px) {
-    & {
-      width: calc((100% - 1 * 60px) / 2);
-    }
-  }
-  @media screen and (max-width: 1199px) {
-    & {
-      width: calc((100% - 2 * 90px) / 3);
-    }
-  }
-}
-
-.clients-list__link {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  height: 100%;
-  padding: 16px 0;
-  border: 1px solid var(--social-net-color);
-  border-radius: 4px;
-
-  &:hover,
-  &:active {
-    border-color: var(--accent-color);
-    transition: border-color 250ms var(--cubic-bezier);
-  }
-
-  &:hover .clients-list__icon,
-  &:active .clients-list__icon {
-    fill: var(--accent-color);
-    transition: fill 250ms var(--cubic-bezier);
-  }
-}
-
-.clients-list__icon {
-  fill: var(--social-net-color);
-}

@@ -268,6 +268,8 @@ ul {
 
 img {
   display: block;
+  max-width: 100%;
+  height: auto;
 }
 
 :root {
@@ -1109,39 +1111,32 @@ body {
 }
 
 .clients-list {
+  margin: -15px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
 }
-@media screen and (min-width: 768px) {
-  .clients-list {
-    margin: -15px;
-  }
-}
-@media screen and (max-width: 1199px) {
-  .clients-list {
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-  }
-}
-
 .clients-list__item {
   margin: 15px;
 }
-@media screen and (max-width: 767px) {
+.clients-list__item {
+  width: calc((100% - 60px) / 2);
+}
+@media screen and (min-width: 768px) {
   .clients-list__item {
-    width: calc((100% - 60px) / 2);
+    width: calc((100% - 90px) / 3);
   }
 }
-@media screen and (max-width: 1199px) {
+@media screen and (min-width: 1200px) {
   .clients-list__item {
-    width: calc((100% - 180px) / 3);
+    width: calc((100% - 180px) / 6);
   }
 }
-
 .clients-list__link {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1163,12 +1158,11 @@ body {
   -webkit-transition: border-color 250ms var(--cubic-bezier);
   transition: border-color 250ms var(--cubic-bezier);
 }
-.clients-list__link:hover .clients-list__icon, .clients-list__link:active .clients-list__icon {
+.clients-list__link:hover .customers-list__icon, .clients-list__link:active .customers-list__icon {
   fill: var(--accent-color);
   -webkit-transition: fill 250ms var(--cubic-bezier);
   transition: fill 250ms var(--cubic-bezier);
 }
-
 .clients-list__icon {
   fill: var(--social-net-color);
 }
