@@ -284,7 +284,7 @@ img {
   --hero-bg-opacity: rgba(47, 48, 58, 0.4);
   --modal-opacity-bg: rgba(0, 0, 0, 0.2);
   --capabilities-descr-bg-color: rgba(47, 48, 58, 0.8);
-  --portf-thumb-bg-color: rgba(33, 150, 243, 0.9);
+  --portfolio-thumb-bg-color: rgba(33, 150, 243, 0.9);
   --footer-icon-bg: rgba(255, 255, 255, 0.1);
   --border-color: #eeeeee;
   --border-color-header: #ececec;
@@ -670,7 +670,7 @@ body {
 }
 
 .features__subtitle {
-  text-align: center;
+  text-align: left;
   margin-bottom: 10px;
 }
 
@@ -745,8 +745,12 @@ body {
   background-color: var(--accent-bg-color);
 }
 
-.team__title {
-  margin-bottom: 30px;
+@media screen and (max-width: 1199px) {
+  .team__title {
+    font-size: 28px;
+    line-height: 1.18;
+    margin-bottom: 30px;
+  }
 }
 @media screen and (min-width: 1200px) {
   .team__title {
@@ -755,7 +759,7 @@ body {
 }
 
 .clients__title {
-  margin-bottom: 30px;
+  margin-bottom: 50px;
 }
 
 .footer {
@@ -1051,7 +1055,7 @@ body {
 
 .team-members__title {
   margin-bottom: 10px;
-  font-weight: 500;
+  font-weight: 700;
 }
 
 .team-members__text {
@@ -1089,10 +1093,10 @@ body {
   -webkit-transition: background-color 250ms var(--cubic-bezier);
   transition: background-color 250ms var(--cubic-bezier);
 }
-.social-net__link:hover, .social-net__link:active {
+.social-net__link:hover, .social-net__link:focus, .social-net__link:active {
   background-color: var(--accent-color);
 }
-.social-net__link:hover .social-net__icon, .social-net__link:active .social-net__icon {
+.social-net__link:hover .social-net__icon, .social-net__link:focus .social-net__icon, .social-net__link:active .social-net__icon {
   fill: var(--primary-color);
 }
 
@@ -1153,12 +1157,12 @@ body {
   border: 1px solid var(--social-net-color);
   border-radius: 4px;
 }
-.clients-list__link:hover, .clients-list__link:active {
+.clients-list__link:hover, .clients-list__link:focus, .clients-list__link:active {
   border-color: var(--accent-color);
   -webkit-transition: border-color 250ms var(--cubic-bezier);
   transition: border-color 250ms var(--cubic-bezier);
 }
-.clients-list__link:hover .clients-list__icon, .clients-list__link:active .clients-list__icon {
+.clients-list__link:hover .clients-list__icon, .clients-list__link:focus .clients-list__icon, .clients-list__link:active .clients-list__icon {
   fill: var(--accent-color);
   -webkit-transition: fill 250ms var(--cubic-bezier);
   transition: fill 250ms var(--cubic-bezier);
@@ -1267,13 +1271,18 @@ body {
   -webkit-box-pack: left;
       -ms-flex-pack: left;
           justify-content: left;
-  margin-bottom: 50px;
+  margin-bottom: 30px;
 }
 @media screen and (min-width: 768px) {
   .portfolio-buttons {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .portfolio-buttons {
+    margin-bottom: 50px;
   }
 }
 
@@ -1333,7 +1342,7 @@ body {
   transition: box-shadow 250ms var(--cubic-bezier);
   transition: box-shadow 250ms var(--cubic-bezier), -webkit-box-shadow 250ms var(--cubic-bezier);
 }
-.portfolio-gallery__item:hover .portfolio-gallery__text {
+.portfolio-gallery__item:hover .portfolio-gallery__text, .portfolio-gallery__item:focus .portfolio-gallery__text {
   -webkit-transform: translateY(0);
           transform: translateY(0);
   -webkit-transition: -webkit-transform 250ms var(--cubic-bezier);
@@ -1410,10 +1419,14 @@ body {
   position: absolute;
   -webkit-transform: translateY(100%);
           transform: translateY(100%);
+  -webkit-transition: -webkit-transform 250ms var(--cubic-bezier);
+  transition: -webkit-transform 250ms var(--cubic-bezier);
+  transition: transform 250ms var(--cubic-bezier);
+  transition: transform 250ms var(--cubic-bezier), -webkit-transform 250ms var(--cubic-bezier);
   font-weight: 400;
   font-size: 18px;
   line-height: 1.56;
-  background-color: var(--portf-thumb-bg-color);
+  background-color: var(--portfolio-thumb-bg-color);
   color: var(--primary-color);
 }
 
@@ -1534,6 +1547,7 @@ body {
   margin-left: 0;
   margin-right: 0;
   margin-bottom: 12px;
+  text-align: center;
 }
 
 .modal-form__field {
@@ -1618,6 +1632,11 @@ body {
           justify-content: center;
   margin-bottom: 30px;
 }
+.checkbox:focus-within ~ .checkbox--checked {
+  outline-offset: 2px;
+  outline: 2px solid var(--primary-text-color);
+  border-radius: 1px;
+}
 
 .checkbox__label {
   display: -webkit-box;
@@ -1631,6 +1650,12 @@ body {
   font-size: 12px;
   line-height: 1.16;
   color: var(--secondary-text-color);
+}
+@media screen and (min-width: 1200px) {
+  .checkbox__label {
+    font-size: 14px;
+    line-height: 1.71;
+  }
 }
 
 .checkbox__input {
@@ -1683,10 +1708,4 @@ body {
 .main-button--form {
   display: block;
   margin: 0 auto;
-}
-
-.checkbox:focus-visible ~ .checkbox--checked {
-  outline-offset: 2px;
-  outline: 2px solid var(--primary-text-color);
-  border-radius: 1px;
 }/*# sourceMappingURL=main.css.map */

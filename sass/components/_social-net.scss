@@ -22,10 +22,12 @@
   transition: background-color 250ms var(--cubic-bezier);
 
   &:hover,
+  &:focus,
   &:active {
     background-color: var(--accent-color);
   }
   &:hover .social-net__icon,
+  &:focus .social-net__icon,
   &:active .social-net__icon {
     fill: var(--primary-color);
   }

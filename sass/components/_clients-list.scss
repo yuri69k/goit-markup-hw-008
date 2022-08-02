@@ -36,6 +36,7 @@
       border-radius: 4px;
   
       &:hover,
+      &:focus,
       &:active {
         border-color: var(--accent-color);
         transition: border-color 250ms var(--cubic-bezier);
@@ -43,6 +44,7 @@
       }
   
       &:hover .clients-list__icon,
+      &:focus .clients-list__icon,
       &:active .clients-list__icon {
         fill: var(--accent-color);
         transition: fill 250ms var(--cubic-bezier);
