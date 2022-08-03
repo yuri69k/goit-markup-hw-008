@@ -4,10 +4,11 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: left;
-  margin-bottom: 30px;
+  margin-bottom: 40px;
 
   @media screen and (min-width: 768px) {
     justify-content: center;
+    margin-bottom: 30px;
   }
   @media screen and (min-width: 1200px) {
     margin-bottom: 50px;
@@ -21,6 +22,9 @@
 
   &:not(:nth-last-child(-n + 2)) {
     margin-bottom: 15px;
+    @media screen and (min-width: 768px){
+      margin-bottom: 0;
+    }
   }
 }
 

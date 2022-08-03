@@ -14,8 +14,7 @@
   margin-bottom: 30px;
   padding-bottom: 24px;
 
-  font-size: 16px;
-  line-height: 1.19;
+ 
   text-align: center;
 
   border-bottom-left-radius: 4px;
@@ -46,9 +45,14 @@
 
 .team-members__title {
   margin-bottom: 10px;
-  font-weight: 700;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.18;
 }
 .team-members__text {
   margin-bottom: 16px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.18;
   color: var(--secondary-text-color);
 }
