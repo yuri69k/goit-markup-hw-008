@@ -6,6 +6,7 @@
 }
 
 .modal {
+  width: 100%;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -14,8 +15,9 @@
   padding: 40px;
   border-radius: 4px;
   background-color: var(--primary-color);
+ 
 
-  @media screen and (min-width: 480px) {
+  @media screen and (min-width: 450px) {
     & {
       width: 450px;
     }

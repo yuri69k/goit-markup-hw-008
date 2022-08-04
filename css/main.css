@@ -1541,6 +1541,7 @@ body {
 }
 
 .modal {
+  width: 100%;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -1554,7 +1555,7 @@ body {
   border-radius: 4px;
   background-color: var(--primary-color);
 }
-@media screen and (min-width: 480px) {
+@media screen and (min-width: 450px) {
   .modal {
     width: 450px;
   }
